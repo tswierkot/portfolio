@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tommy Swierkot — Unity Game Developer</title>
+  <meta name="description" content="Portfolio of Tommy Swierkot, Unity game developer. Gameplay systems, tools, and shipped projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    // Apply saved/system theme before paint to avoid a flash of the wrong theme
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo">TS<span>.</span></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch theme" title="Switch theme">
+          <svg class="theme-toggle__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+          </svg>
+          <svg class="theme-toggle__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero__eyebrow">Unity dev · C#</p>
+        <h1 class="hero__title">Hey, I'm Tommy.<br />I make games<br />(and the tools to build them).</h1>
+        <p class="hero__lead">
+          I'm a Unity developer. Mostly that means gameplay code and editor
+          tooling, but I'll happily dive into other areas as well. I like figuring 
+          things out, debugging and making sure the game performs at its best.
+        </p>
+        <div class="hero__actions">
+          <a href="#work" class="btn btn--primary">View my work</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__intro">
+          <p class="section__label">About</p>
+          <h2 class="section__title">A bit about me.</h2>
+        </div>
+        <div class="about__body">
+          <p>
+            A game is a complex thing. The visuals, the controls, audio, challenges, stability - it takes a lot to make a game that players will enjoy. 
+            I enjoy working with a variety of developers to make the best game possible.
+          </p>
+          <p>
+            <em>Games have been in my life ever since I was a kid. They always brought me a lot of joy and fun. Now I want to bring the same joyful and fun experiences to other people :D</em>
+          </p>
+          <p class="about__now">
+            <strong>Right now:</strong> <em>looking for a fun project to be a part of!</em>
+          </p>
+
+          <div class="skills">
+            <h3 class="skills__heading">Things I tinker with</h3>
+            <ul class="skills__grid">
+              <li>Unity</li>
+              <li>C#</li>
+              <li>Gameplay systems</li>
+              <li>Editor tooling</li>
+              <li>UI</li>
+              <li>Profiling &amp; optimization</li>
+              <li>Git</li>
+              <li>Docker</li>
+              <li>CI/CD pipelines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="section section--alt" id="work">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__label">Stuff I've made</p>
+          <h2 class="section__title">Projects</h2>
+        </div>
+
+        <div class="projects">
+          <!-- Copy one of these <article> blocks per game. Drop a screenshot in
+               assets/ and uncomment the <img> line to replace the placeholder. -->
+          <article class="project">
+            <div class="project__thumb" data-placeholder="Screenshot / GIF">
+              <!-- <img src="assets/project1.jpg" alt="Project name screenshot" /> -->
+            </div>
+            <div class="project__info">
+              <div class="project__meta">
+                <span class="tag">Solo project</span>
+                <span class="tag">2D platformer</span>
+              </div>
+              <h3 class="project__title">Project One</h3>
+              <p class="project__desc">
+                What is it, in a sentence? Then say what you actually built and
+                the part you're proud of. Numbers help if you have them
+                (downloads, a jam placing), but honestly a good GIF sells it
+                better than anything I could write here.
+              </p>
+              <div class="project__links">
+                <a href="#" class="link">itch.io ↗</a>
+                <a href="#" class="link">Trailer ↗</a>
+                <a href="#" class="link">Source ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__thumb" data-placeholder="Screenshot / GIF"></div>
+            <div class="project__info">
+              <div class="project__meta">
+                <span class="tag">Team of 4</span>
+                <span class="tag">3D action</span>
+              </div>
+              <h3 class="project__title">Project Two</h3>
+              <p class="project__desc">
+                Group project? Say what was yours. "I owned the combat and the
+                enemy AI" tells someone more than a feature list ever will. If
+                you wrote a tool the team used, mention it — those always land
+                well in interviews.
+              </p>
+              <div class="project__links">
+                <a href="#" class="link">Steam ↗</a>
+                <a href="#" class="link">Devlog ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project__thumb" data-placeholder="Screenshot / GIF"></div>
+            <div class="project__info">
+              <div class="project__meta">
+                <span class="tag">Game Jam</span>
+                <span class="tag">48 hours</span>
+              </div>
+              <h3 class="project__title">Project Three</h3>
+              <p class="project__desc">
+                A jam game or a weird little experiment. These are great to show
+                off — they prove you can ship something fast and that you build
+                for fun, not just for a grade.
+              </p>
+              <div class="project__links">
+                <a href="#" class="link">Play ↗</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container contact">
+        <p class="section__label">Contact</p>
+        <h2 class="section__title">Say hi.</h2>
+        <p class="contact__lead">
+          I'm open to game dev roles and the occasional contract gig. Got a
+          project, a question, or just want to chat about gamedev? My inbox is open.
+        </p>
+        <a class="contact__email" id="email" rel="noopener" data-user="tomek.swierkot" data-domain="gmail.com">Show email</a>
+        <div class="contact__socials">
+          <a href="https://github.com/tswierkot" class="link" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/tommytheitguy/" class="link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://ludumdare.com/users/tommytheitguy/games" class="link" target="_blank" rel="noopener noreferrer">Ludum Dare</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> Tomasz Świerkot</span>
+      <a href="#top" class="link">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
